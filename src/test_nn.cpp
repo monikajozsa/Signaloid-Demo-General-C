@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <uxhw.h>
 
 // Function to perform forward pass in a single layer model
 double forwardPass(const std::vector<double>& inputs, const std::vector<double>& weights) {
@@ -12,8 +13,12 @@ double forwardPass(const std::vector<double>& inputs, const std::vector<double>&
 }
 
 int main() {
-    // Define weights and inputs
-    std::vector<double> weights = {0.5, -0.5, 0.3};
+    // Define weights using UxHwFloatUniformDist
+    float w1 = UxHwFloatUniformDist(0.4f, 0.6f);
+    float w2 = -UxHwFloatUniformDist(0.4f, 0.6f);
+    float w3 = UxHwFloatUniformDist(0.2f, 0.4f);
+    
+    std::vector<double> weights = {w1, w2, w3};
     std::vector<double> inputs = {1.0, 2.0, 3.0};
 
     // Calculate output
