@@ -49,7 +49,7 @@ int main() {
     LTI_System system(A, B, C, D);
 
     // Define input
-    float u = UxHwDoubleGaussDist(1.0, 0.1)(); // Mean 1.0, std dev 0.1
+    float u = UxHwDoubleGaussDist(1.0, 0.1); // Mean 1.0, std dev 0.1
 
     // Update system and get output
     system.update(u);
