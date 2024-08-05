@@ -17,11 +17,11 @@ int main() {
     float w1 = 1.0;
     float w2 = 1.0;
 
-    float i1 = UxHwFloatUniformDist(0.4f, 0.6f)
-    float i2 = UxHwFloatUniformDist(0.2f, 0.4f)
+    float i1 = UxHwFloatUniformDist(0.4f, 0.6f);
+    float i2 = UxHwFloatUniformDist(0.2f, 0.4f);
     
     std::vector<float> weights = {w1, w2};
-    std::vector<float> inputs = {1.0f, 2.0f};
+    std::vector<float> inputs = {i1, i2};
 
     // Calculate output
     float output = forwardPass(inputs, weights);
