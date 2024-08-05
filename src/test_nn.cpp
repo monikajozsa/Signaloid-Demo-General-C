@@ -14,12 +14,14 @@ float forwardPass(const std::vector<float>& inputs, const std::vector<float>& we
 
 int main() {
     // Define weights using UxHwFloatUniformDist
-    float w1 = UxHwFloatUniformDist(0.4f, 0.6f);
-    float w2 = -UxHwFloatUniformDist(0.4f, 0.6f);
-    float w3 = UxHwFloatUniformDist(0.2f, 0.4f);
+    float w1 = 1.0;
+    float w2 = 1.0;
+
+    float i1 = UxHwFloatUniformDist(0.4f, 0.6f)
+    float i2 = UxHwFloatUniformDist(0.2f, 0.4f)
     
-    std::vector<float> weights = {w1, w2, w3};
-    std::vector<float> inputs = {1.0f, 2.0f, 3.0f};
+    std::vector<float> weights = {w1, w2};
+    std::vector<float> inputs = {1.0f, 2.0f};
 
     // Calculate output
     float output = forwardPass(inputs, weights);
